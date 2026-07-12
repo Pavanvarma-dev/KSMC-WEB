@@ -27,11 +27,11 @@ export default function Footer({ onNavClick }) {
     <footer id="contact" className="bg-brand-dark text-white py-16 mt-8 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
-          
+
           {/* Brand Col */}
           <div className="lg:col-span-3 space-y-4">
             <div className="flex items-center gap-3">
-              <img src={logoImg} className="h-10 w-auto" alt="KSMCM Logo" />
+              <img src={logoImg} className="h-20 w-auto" alt="KSMCM Logo" />
               <div>
                 <span className="block text-lg font-bold text-white tracking-wide">KSMCM</span>
                 <span className="block text-[10px] font-semibold tracking-wider text-emerald-400 uppercase">INDUSTRIES</span>
@@ -116,9 +116,9 @@ export default function Footer({ onNavClick }) {
             <div className="space-y-3 text-xs text-white/70">
               <p className="leading-relaxed">Stay updated with our latest features, expansion plans, and wholesale price drops.</p>
               <form className="flex flex-col sm:flex-row gap-2 mt-3" onSubmit={handleFooterSubscribe}>
-                <input 
-                  type="email" 
-                  className="w-full px-3 py-2 rounded bg-white/10 text-white border border-white/20 placeholder-white/50 focus:outline-none focus:border-emerald-400 transition-colors text-xs" 
+                <input
+                  type="email"
+                  className="w-full px-3 py-2 rounded bg-white/10 text-white border border-white/20 placeholder-white/50 focus:outline-none focus:border-emerald-400 transition-colors text-xs"
                   placeholder="Your email address..."
                   value={footerEmail}
                   onChange={(e) => setFooterEmail(e.target.value)}

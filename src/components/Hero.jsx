@@ -32,8 +32,8 @@ export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden text-white">
       {/* backdrop with background image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: `url(${bgImage})`}} />
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/60 via-[#173a24]/60 to-[#3a2c14]/60" />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${bgImage})` }} />
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/60 via-[#173a24]/60 to-[#3a2c14]/60" /> */}
 
       <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-16 lg:pt-40">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -44,15 +44,15 @@ export default function Hero() {
               India's Leading Rural Commerce & Services Ecosystem
             </span>
 
-            <h1 className="mt-6 text-4xl sm:text-5xl font-extrabold leading-tight">
+            <h1 className="mt-6 text-4xl sm:text-5xl font-extrabold ">
               Empowering
               <br />
               Rural India Through
               <br />
               <span className="text-brand-green">Commerce, </span>
-              <span className="text-brand-orange">Technology &</span>
+              <span className="text-brand-orange py-10">Technology &</span>
               <br />
-              <span className="text-brand-green">Opportunity</span>
+              <span className="text-brand-green mt-4">Opportunity</span>
             </h1>
 
             <p className="mt-6 max-w-md text-sm text-white/70">
