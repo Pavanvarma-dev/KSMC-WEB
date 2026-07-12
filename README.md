@@ -1,16 +1,27 @@
-# React + Vite
+# KSMCM Industries — Static React Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A static React + Vite + Tailwind CSS site, ready to build and deploy to S3 + CloudFront.
 
-Currently, two official plugins are available:
+## Local development
+```bash
+npm install
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Production build
+```bash
+npm run build
+```
+This outputs static files to the `dist/` folder — this is what you deploy to S3.
 
-## React Compiler
+## Deploy to S3
+```bash
+aws s3 sync ./dist s3://your-unique-bucket-name --delete
+aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Notes
+- All photos from the original design (drone shot, family photo, delivery truck, phone screenshots, QR code) are placeholder gradient blocks — swap them for real images in the relevant components under `src/components/`.
+- Icons use `lucide-react`.
+- Colors and fonts are defined in `tailwind.config.js` and `src/index.css`.
+- Update the CTA links, phone number, email, and social links in `Footer.jsx` and `DownloadSection.jsx` with your real details.
