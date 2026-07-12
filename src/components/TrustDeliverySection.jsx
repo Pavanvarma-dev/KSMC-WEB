@@ -1,5 +1,5 @@
 import { MapPin, ShieldCheck, Headphones, Check } from "lucide-react";
-import trustImage from "../images/WhatsApp Image 2026-07-12 at 11.31.51 AM.jpeg";
+import trustImage from "/src/assets/images/ksmc-delivery.jpeg";
 
 const POINTS = [
   "Real-time order tracking",
@@ -16,7 +16,7 @@ const CARDS = [
 
 export default function TrustDeliverySection() {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr_1fr] items-center">
           <div>

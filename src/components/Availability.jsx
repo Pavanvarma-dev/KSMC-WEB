@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { MapPin, ArrowRight } from 'lucide-react';
+import india from "/src/assets/images/india.jpg";
+
 
 export default function Availability() {
   const [pincode, setPincode] = useState('');

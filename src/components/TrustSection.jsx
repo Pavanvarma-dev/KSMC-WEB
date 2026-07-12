@@ -1,9 +1,11 @@
 import { ShieldCheck, Award, Users2, Handshake, Star, Target } from "lucide-react";
-import badge1 from "../images/1.png";
-import badge2 from "../images/2.png";
-import badge3 from "../images/4.png";
-import badge4 from "../images/5.png";
-import badge5 from "../images/6.png";
+import badge1 from "/src/assets/images/MSME.png";
+import badge2 from "/src/assets/images/startup-india.png";
+import badge3 from "/src/assets/images/digital-India.png";
+import badge4 from "/src/assets/images/women-emp.png";
+import badge5 from "/src/assets/images/niti-a.png";
+import badge6 from "/src/assets/images/gem.png";
+import badge7 from "/src/assets/images/75-india.png";
 
 const BADGES = [
   { name: "MSME", tag: "MSME Registered", image: badge1 },
@@ -26,7 +28,7 @@ const PILLARS = [
 
 export default function TrustSection() {
   return (
-    <section id="about" className="bg-white py-20">
+    <section id="about" className="bg-white py-5">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <p className="text-xs font-bold tracking-[0.25em] text-brand-green">
           TRUST &amp; RECOGNITION
@@ -47,7 +49,7 @@ export default function TrustSection() {
               key={b.name}
               className="flex min-w-[150px] flex-1 flex-col items-center justify-between gap-3 rounded-xl border border-gray-100 bg-white px-4 py-6 shadow-sm"
             >
-              <img src={b.image} alt={b.name} className="h-12 w-12 object-contain" />
+              <img src={b.image} alt={b.name} className="h-50 w-50 object-contain" />
               <p className="flex items-center gap-1 text-[10px] font-medium text-brand-green">
                 <span className="flex h-3.5 w-3.5 items-center justify-center rounded-full bg-brand-green text-white text-[8px]">
                   ✓

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MapPin, Tag, Star, PackageCheck, Heart, ShieldCheck } from "lucide-react";
+import india from "/src/assets/images/india.jpg";
 
 const INTEREST = [
   { icon: Tag, title: "Best Prices", sub: "Competitive prices on all products." },
@@ -50,7 +51,9 @@ export default function AvailabilitySection() {
               Currently Serving <span className="text-brand-green">500+ Villages</span>
             </p>
             <p className="text-xs text-gray-500">Across 6 States</p>
-            <div className="mt-3 mx-auto h-28 w-20 rounded-lg bg-gradient-to-b from-brand-green/30 to-brand-green/60" />
+            <div className="mt-3 mx-auto h-28 w-20 rounded-lg bg-gradient-to-b from-brand-green/30 to-brand-green/60">
+                <img src={india} alt="India Map" className="h-full w-full object-cover" />
+            </div>
           </div>
 
           <div className="rounded-xl bg-brand-dark p-5 text-white text-center max-w-[200px]">

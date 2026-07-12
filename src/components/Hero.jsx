@@ -10,7 +10,7 @@ import {
   UserRound,
   Clock,
 } from "lucide-react";
-import bgImage from "../images/2.png";
+import bgImage from "/src/assets/images/2.png";
 
 const ORBIT_ITEMS = [
   { icon: ShoppingCart, title: "Smart Mart", sub: "10,000+ Products", pos: "top-[-14%] left-1/2 -translate-x-1/2" },
@@ -45,7 +45,7 @@ export default function Hero() {
             </span>
 
             <h1 className="mt-6 text-4xl sm:text-5xl font-extrabold leading-tight">
-              Empowerings
+              Empowering
               <br />
               Rural India Through
               <br />

@@ -1,12 +1,12 @@
 import { Download, Handshake, Users, Share2, Camera, Video, Link2, MessageCircle } from "lucide-react";
-import qrCode from "../images/Q.png";
-import phoneImage from "../images/WhatsApp Image 2026-07-12 at 11.35.34 AM.jpeg";
+import qrCode from "/src/assets/images/QRCode.jpg";
+import phoneImage from "/src/assets/images/Q.png";
 
 const SOCIAL = [Share2, Camera, Video, Link2, MessageCircle];
 
 export default function DownloadSection() {
   return (
-    <section id="partners" className="py-14">
+    <section id="partners" className="py-5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid gap-8 rounded-2xl bg-brand-dark p-8 text-white lg:grid-cols-3 items-center">
           <div>

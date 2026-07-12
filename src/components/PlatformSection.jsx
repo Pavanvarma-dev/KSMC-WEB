@@ -1,5 +1,7 @@
 import { Check, ShieldCheck, Lock, Fingerprint, Truck, Clock3, Layers, TrendingUp } from "lucide-react";
-import phoneImages from "../images/WhatsApp Image 2026-07-12 at 11.35.34 AM (1).jpeg";
+import phoneImages from "/src/assets/images/Q.png";
+import familyImage from "/src/assets/images/family-with-phone.png";
+
 
 const STRIP = [
   { icon: Truck, value: "10,000+", label: "Products Available Across Categories" },
@@ -24,7 +26,7 @@ const SECURITY = [
 
 export default function PlatformSection() {
   return (
-    <section className="bg-brand-light/40 py-20">
+    <section className="bg-brand-light/40 py-5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-2 gap-3 rounded-2xl bg-white p-4 shadow-sm sm:grid-cols-5">
           {STRIP.map(({ icon: Icon, value, label }) => (
@@ -40,8 +42,8 @@ export default function PlatformSection() {
           ))}
         </div>
 
-        <div className="mt-16 grid items-center gap-12 lg:grid-cols-3">
-          <div className="lg:col-span-1">
+        <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
+          <div>
             <p className="text-xs font-bold tracking-[0.2em] text-brand-green">
               EVERYTHING YOU NEED, IN ONE PLACE
             </p>
@@ -67,33 +69,32 @@ export default function PlatformSection() {
             </ul>
           </div>
 
-          {/* phone mockup placeholder */}
-          <div className="flex justify-center">
-            <div className="relative h-[420px] w-[220px] rounded-[2rem] border-8 border-brand-dark bg-gradient-to-b from-brand-green to-brand-dark p-4 shadow-2xl overflow-hidden">
-              <img src={phoneImages} alt="KSMCM App" className="h-full w-full object-cover rounded-lg" />
-            </div>
-          </div>
-
-          <div className="rounded-2xl bg-brand-light/70 p-6">
-            <p className="text-xs font-bold tracking-[0.15em] text-brand-green">
-              SAFE. SECURE. RELIABLE.
-            </p>
-            <p className="mt-2 text-sm text-gray-600">
-              Your security is our priority. We use advanced technology to
-              protect your data and ensure safe transactions.
-            </p>
-            <div className="mt-5 space-y-4">
-              {SECURITY.map(({ icon: Icon, title, sub }) => (
-                <div key={title} className="flex items-center gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-brand-green shadow-sm">
-                    <Icon className="h-4 w-4" />
-                  </span>
-                  <div className="leading-tight">
-                    <p className="text-sm font-bold text-brand-dark">{title}</p>
-                    <p className="text-[11px] text-gray-500">{sub}</p>
+          <div className="grid grid-cols-2 gap-6 items-center">
+            <div className="rounded-2xl bg-brand-light/70 p-6 text-left">
+              <p className="text-xs font-bold tracking-[0.15em] text-brand-green">
+                SAFE. SECURE. RELIABLE.
+              </p>
+              <p className="mt-2 text-sm text-gray-600">
+                Your security is our priority. We use advanced technology to
+                protect your data and ensure safe transactions.
+              </p>
+              <div className="mt-5 space-y-4">
+                {SECURITY.map(({ icon: Icon, title, sub }) => (
+                  <div key={title} className="flex items-center gap-3">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-brand-green shadow-sm">
+                      <Icon className="h-4 w-4" />
+                    </span>
+                    <div className="leading-tight">
+                      <p className="text-sm font-bold text-brand-dark">{title}</p>
+                      <p className="text-[11px] text-gray-500">{sub}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <img src={familyImage} alt="Family with Phone" className="w-full h-auto object-cover rounded-lg" />
             </div>
           </div>
         </div>

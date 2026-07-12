@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
-import logo from "../images/KSMCM LOGO.png";
+import logo from "/src/assets/images/KSMCM LOGO.png";
 
 const NAV_LINKS = [
   { label: "Home", href: "#home" },

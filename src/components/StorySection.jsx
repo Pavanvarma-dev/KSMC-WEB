@@ -1,6 +1,6 @@
 import { Play, Briefcase, HeartPulse, Smartphone, Users, TrendingUp } from "lucide-react";
-import storyImage from "../images/WhatsApp Image 2026-07-12 at 7.20.20 AM.jpeg";
-import deliveryImage from "../images/WhatsApp Image 2026-07-12 at 7.20.23 AM.jpeg";
+import storyImage from "/src/assets/images/Q.png";
+import girlImage from "/src/assets/images/Girl-with-phone.png";
 
 const FOCUS = [
   { title: "Rural Focused", sub: "Built for Villages and Mandals with deep understanding of rural needs." },
@@ -25,7 +25,7 @@ const IMPACT_STATS = [
 
 export default function StorySection() {
   return (
-    <section id="impact" className="bg-white py-20">
+    <section id="impact" className="bg-white py-5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_auto] items-start">
           <div>
@@ -52,7 +52,7 @@ export default function StorySection() {
             ))}
           </div>
 
-          <div className="hidden lg:flex w-56 flex-col justify-between rounded-xl bg-brand-dark p-5 text-white self-start overflow-hidden">
+          {/* <div className="hidden lg:flex w-56 flex-col justify-between rounded-xl bg-brand-dark p-5 text-white self-start overflow-hidden">
             <div className="absolute inset-0 rounded-xl opacity-40">
               <img src={storyImage} alt="Story" className="h-full w-full object-cover" />
             </div>
@@ -66,12 +66,12 @@ export default function StorySection() {
             <button className="relative mt-4 text-xs font-semibold text-brand-green z-10">
               Watch Video →
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[1fr_auto_auto] items-center">
-          <div className="relative h-64 overflow-hidden rounded-2xl bg-gradient-to-br from-brand-green to-brand-dark">
-            <img src={deliveryImage} alt="Delivery" className="absolute inset-0 h-full w-full object-cover opacity-40" />
+          <div className="relative h-64 w-100">
+            <img src={girlImage} alt="Delivery" className="absolute inset-0 h-full w-full object-cover opacity-40" />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-brand-dark/20" />
             <p className="absolute left-4 top-4 text-xs font-bold uppercase tracking-wide text-white/80 z-10">
               Creating Real Impact
