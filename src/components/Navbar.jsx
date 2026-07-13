@@ -17,8 +17,8 @@ export default function Navbar() {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 ">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
-        <a href="#home" className="flex items-center gap-2">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5 bg-red">
+        <a href="#home" className="flex items-center gap-2 bg-yellow -mt-5">
           <img src={logo} alt="KSMCM Logo" className="h-40 w-auto" />
         </a>
 
