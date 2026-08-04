@@ -30,7 +30,7 @@ export default function Navbar() {
                 className="flex items-center gap-1 hover:text-brand-light transition-colors"
               >
                 {link.label}
-                {link.hasDropdown && <ChevronDown className="h-3.5 w-3.5" />}
+                {/* {link.hasDropdown && <ChevronDown className="h-3.5 w-3.5" />} */}
               </a>
             </li>
           ))}
@@ -38,16 +38,16 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-1 text-sm text-white/90 mb-10">
           {/* <span>ENG</span> */}
-          <ChevronDown className="h-3.5 w-3.5" />
+          {/* <ChevronDown className="h-3.5 w-3.5" /> */}
         </div>
 
-        <button
+        {/* <button
           className="lg:hidden text-white"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        </button> */}
       </nav>
 
       {open && (
