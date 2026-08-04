@@ -11,6 +11,7 @@ import DownloadSection from "./components/DownloadSection";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import ServicesPage from "./components/ServicesPage";
+import CareersPage from "./components/CareersPage";
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.hash || "#home");
@@ -24,7 +25,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (currentPath && currentPath !== "#about" && currentPath !== "#services") {
+    if (currentPath && currentPath !== "#about" && currentPath !== "#services" && currentPath !== "#careers") {
       const id = currentPath.replace("#", "");
       const element = document.getElementById(id);
       if (element) {
@@ -37,13 +38,14 @@ export default function App() {
         }, 150);
         return () => clearTimeout(timer);
       }
-    } else if (currentPath === "#about" || currentPath === "#services") {
+    } else if (currentPath === "#about" || currentPath === "#services" || currentPath === "#careers") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [currentPath]);
 
   const showAbout = currentPath === "#about";
   const showServices = currentPath === "#services";
+  const showCareers = currentPath === "#careers";
 
   return (
     <div className="min-h-screen bg-white font-sans">
@@ -52,6 +54,8 @@ export default function App() {
         <AboutUs />
       ) : showServices ? (
         <ServicesPage />
+      ) : showCareers ? (
+        <CareersPage />
       ) : (
         <>
           <Hero />
