@@ -10,6 +10,7 @@ import AvailabilitySection from "./components/AvailabilitySection";
 import DownloadSection from "./components/DownloadSection";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
+import ServicesPage from "./components/ServicesPage";
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.hash || "#home");
@@ -23,7 +24,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (currentPath && currentPath !== "#about") {
+    if (currentPath && currentPath !== "#about" && currentPath !== "#services") {
       const id = currentPath.replace("#", "");
       const element = document.getElementById(id);
       if (element) {
@@ -36,18 +37,21 @@ export default function App() {
         }, 150);
         return () => clearTimeout(timer);
       }
-    } else if (currentPath === "#about") {
+    } else if (currentPath === "#about" || currentPath === "#services") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [currentPath]);
 
   const showAbout = currentPath === "#about";
+  const showServices = currentPath === "#services";
 
   return (
     <div className="min-h-screen bg-white font-sans">
       <Navbar />
       {showAbout ? (
         <AboutUs />
+      ) : showServices ? (
+        <ServicesPage />
       ) : (
         <>
           <Hero />
