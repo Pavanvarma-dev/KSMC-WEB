@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import ServicesPage from "./components/ServicesPage";
 import CareersPage from "./components/CareersPage";
+import PartnersPage from "./components/PartnersPage";
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.hash || "#home");
@@ -25,7 +26,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    if (currentPath && currentPath !== "#about" && currentPath !== "#services" && currentPath !== "#careers") {
+    if (currentPath && currentPath !== "#about" && currentPath !== "#services" && currentPath !== "#careers" && currentPath !== "#partners") {
       const id = currentPath.replace("#", "");
       const element = document.getElementById(id);
       if (element) {
@@ -38,7 +39,7 @@ export default function App() {
         }, 150);
         return () => clearTimeout(timer);
       }
-    } else if (currentPath === "#about" || currentPath === "#services" || currentPath === "#careers") {
+    } else if (currentPath === "#about" || currentPath === "#services" || currentPath === "#careers" || currentPath !== "#partners") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }, [currentPath]);
@@ -46,6 +47,7 @@ export default function App() {
   const showAbout = currentPath === "#about";
   const showServices = currentPath === "#services";
   const showCareers = currentPath === "#careers";
+  const partnerspage = currentPath === "#partners";
 
   return (
     <div className="min-h-screen bg-white font-sans">
@@ -56,6 +58,8 @@ export default function App() {
         <ServicesPage />
       ) : showCareers ? (
         <CareersPage />
+      ) : partnerspage ? (
+        <PartnersPage />
       ) : (
         <>
           <Hero />
