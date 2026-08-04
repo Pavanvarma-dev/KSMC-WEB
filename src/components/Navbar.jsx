@@ -37,7 +37,7 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden lg:flex items-center gap-1 text-sm text-white/90 mb-10">
-          <span>ENG</span>
+          {/* <span>ENG</span> */}
           <ChevronDown className="h-3.5 w-3.5" />
         </div>
 
