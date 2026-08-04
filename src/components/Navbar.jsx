@@ -5,7 +5,7 @@ import logo from "/src/assets/images/KSMCM LOGO.png";
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "About us", href: "#about" },
-  { label: "Services", href: "#services", hasDropdown: true },
+  { label: "Services", href: "#services" },
   { label: "Impact", href: "#impact" },
   { label: "Partners", href: "#partners" },
   { label: "Careers", href: "#careers" },
