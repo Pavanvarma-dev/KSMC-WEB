@@ -6,9 +6,9 @@ const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "About us", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Impact", href: "#impact" },
   { label: "Partners", href: "#partners" },
   { label: "Careers", href: "#careers" },
+  { label: "Impact", href: "#impact" },
   { label: "Contact", href: "#contact" },
 ];
 
